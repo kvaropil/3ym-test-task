@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "../node_modules",
+    "target": "es2018",
+    "lib": ["es2018", "dom"],
+    "types": ["cypress"],
+    "moduleResolution": "node"
+  },
+  "include": ["**/*.ts"]
+}
