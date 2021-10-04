@@ -1,19 +1,20 @@
+const path = require('path');
+
 module.exports = {
-  resolve: {
-    extensions: ['.ts', '.js'],
-  },
-  node: { fs: 'empty', child_process: 'empty', readline: 'empty' },
   module: {
     rules: [
       {
         test: /\.ts$/,
-        exclude: [/node_modules/],
-        use: [
-          {
-            loader: 'ts-loader',
-          },
-        ],
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   },
 };
