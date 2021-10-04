@@ -5,3 +5,5 @@ cypress/videos/
 .DS_Store
 
 cypress/screenshots/
+
+yarn-error.log
